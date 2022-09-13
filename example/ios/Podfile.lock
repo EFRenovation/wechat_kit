@@ -3,6 +3,12 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - mob_sharesdk/ShareSDK (4.4.6):
+    - MOBFoundation (>= 3.2.9)
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.4.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation (>= 3.2.9)
+  - MOBFoundation (3.2.36)
   - path_provider_ios (0.0.1):
     - Flutter
   - sqflite (0.0.2):
@@ -13,9 +19,11 @@ PODS:
     - wechat_kit/pay (= 4.0.3)
   - wechat_kit/pay (4.0.3):
     - Flutter
+    - mob_sharesdk/ShareSDKPlatforms/WeChat
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (from `https://gitee.com/eyrefree/ShareSDK-for-iOS.git`)
   - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
   - wechat_kit (from `.symlinks/plugins/wechat_kit/ios`)
@@ -23,10 +31,13 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FMDB
+    - MOBFoundation
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  mob_sharesdk:
+    :git: https://gitee.com/eyrefree/ShareSDK-for-iOS.git
   path_provider_ios:
     :path: ".symlinks/plugins/path_provider_ios/ios"
   sqflite:
@@ -34,13 +45,20 @@ EXTERNAL SOURCES:
   wechat_kit:
     :path: ".symlinks/plugins/wechat_kit/ios"
 
+CHECKOUT OPTIONS:
+  mob_sharesdk:
+    :commit: a26f4e129edf43a2a2daac4bac310e73ace94477
+    :git: https://gitee.com/eyrefree/ShareSDK-for-iOS.git
+
 SPEC CHECKSUMS:
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  mob_sharesdk: 045db93e48c95adc85c90d6f17fdac53b526088d
+  MOBFoundation: 78ad4264f436b3d147375ab7fdb8088b9e22ca5d
   path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
-  wechat_kit: a4c650f358b8a7ca96cbb6ce62233a45df1655d0
+  wechat_kit: 9d5ab4bdec009d3099cd24cc516ea9f0a6035d60
 
-PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+PODFILE CHECKSUM: af332565b72dee31cec6f8a63df9a295647b267e
 
 COCOAPODS: 1.11.3
